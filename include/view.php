@@ -9098,11 +9098,11 @@
             <td><?php echo $row["roll_no"]; ?></td>
 
              <td class="project-actions text-center">
-                <button class="btn btn-info btn-sm" onclick="document.getElementById('edit_student<?php echo $row["student_id"]; ?>').style.display='block'">
+                <a href="student_form_update?id=<?php echo $row["student_id"]; ?>" class="btn btn-info btn-sm" >
                     <i class="fas fa-pencil-alt">
                     </i>
                     
-                </button>
+                            </a>
 
             <button class="btn btn-danger btn-sm" onclick="document.getElementById('delete_student<?php echo $row["student_id"]; ?>').style.display='block'">
                     <i class="fas fa-trash">

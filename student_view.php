@@ -1,91 +1,85 @@
-<?php 
-    $page_no = "11";
-    $page_no_inside = "11_8";
-    include "include/authentication.php"; 
-    $visible = md5("visible");
-    date_default_timezone_set("Asia/Calcutta");
-    $date_variable_today_month_year_with_timing = date("d M, Y. h:i A");
+<?php
+$page_no = "11";
+$page_no_inside = "11_8";
+include './include/config.php';
+include "include/authentication.php";
+$visible = md5("visible");
+date_default_timezone_set("Asia/Calcutta");
+$date_variable_today_month_year_with_timing = date("d M, Y. h:i A");
 ?>
 <?php
-        if(isset($_POST["importExcelButton"]))
-        {
-            $conn = mysqli_connect("localhost", "root", "", "nspsjsr_db");
-            $file = $_FILES['importExcelFile']['tmp_name'];
-            $handle = fopen($file, "r");
-            if ($file == NULL) {
-                echo "<script>
+if (isset($_POST["importExcelButton"])) {
+    // $conn = mysqli_connect("localhost", "root", "", "nspsjsr_db");*-
+    $file = $_FILES['importExcelFile']['tmp_name'];
+    $handle = fopen($file, "r");
+    if ($file == NULL) {
+        echo "<script>
                         alert('Please first select an Excel file!!!'); 
                         location.replace('student_view');
                     </script>";
-            }
-            else {
-                $c = 0;
-                while(($filesop = fgetcsv($handle, 1000, ",")) !== false)
-                {   
-                    
-                    $school_name = $filesop[0];
-                    $branch_name = $filesop[1];
-                    $reg_no = $filesop[2];
-                    $roll_no = $filesop[3];
-                    $class_name = $filesop[4];                               
-                    $section_name = $filesop[5];
-                    $student_name = $filesop[6];    
-                    $dob = $filesop[7];
-                    $gender = $filesop[8];
-                    $father_name = $filesop[9];
-                    $mother_name = $filesop[10];
-                    $parent_contactno = $filesop[11];
-                    
-                   /// print_r($branch_name);exit();
+    } else {
+        $c = 0;
+        while (($filesop = fgetcsv($handle, 1000, ",")) !== false) {
 
-                      $sql_school = "SELECT * FROM `tbl_university_details` WHERE `university_details_university_name`='$school_name'";
-                      $result_school = mysqli_query($conn, $sql_school);
-                      $row_school = mysqli_fetch_assoc($result_school);
-                      $university_details_id = $row_school["university_details_id"];
 
-                      $sql_class = "SELECT * FROM `tbl_branch` WHERE `branch_name`='$branch_name'";
-                      $result_class = mysqli_query($conn, $sql_class);
-                      $row_class = mysqli_fetch_assoc($result_class);
-                      $branch_id = $row_class["id"];
+            $school_name = $filesop[0];
+            $branch_name = $filesop[1];
+            $reg_no = $filesop[2];
+            $roll_no = $filesop[3];
+            $class_name = $filesop[4];
+            $section_name = $filesop[5];
+            $student_name = $filesop[6];
+            $dob = $filesop[7];
+            $gender = $filesop[8];
+            $father_name = $filesop[9];
+            $mother_name = $filesop[10];
+            $parent_contactno = $filesop[11];
 
-                      $sql_class = "SELECT * FROM `tbl_class` WHERE `course_name`='$class_name'";
-                      $result_class = mysqli_query($conn, $sql_class);
-                      $row_class = mysqli_fetch_assoc($result_class);
-                      $class_id = $row_class["course_id"];
-                    
-                       $sql_section = "SELECT * FROM `tbl_section` WHERE `section_name`='$section_name'";
-                       $result_section = mysqli_query($conn, $sql_section);
-                       $row_section = mysqli_fetch_assoc($result_section);
-                       $section_id = $row_section["section_id"];
-                    
-                    
-                
-                    
-        $sql = "INSERT INTO `tbl_student`(`student_id`,`university_details_id`,`branch_id`,`reg_no`, `roll_no`,`course_id`,`section_id`,`student_name`,`dob`,`gender`,`father_name`,`mother_name`,`parent_contactno`,`create_time`,`status`) 
-                    VALUES ('','$university_details_id','$branch_id','$reg_no','$roll_no','$class_id','$section_id','$student_name','$dob','$gender','$father_name','$mother_name','$parent_contactno','$date_variable_today_month_year_with_timing','$visible')"; 
-                      
-                    $stmt = mysqli_prepare($conn,$sql);
-                    mysqli_stmt_execute($stmt);
-                    
-                    
-                    $c = $c + 1;
-                }
-                if($sql){
-                   echo "<script>
+            $sql_school = "SELECT * FROM `tbl_university_details` WHERE `university_details_university_name`='$school_name'";
+            $result_school = mysqli_query($conn, $sql_school);
+            $row_school = mysqli_fetch_assoc($result_school);
+            $university_details_id = $row_school["university_details_id"];
+
+            $sql_class = "SELECT * FROM `tbl_branch` WHERE `branch_name`='$branch_name'";
+            $result_class = mysqli_query($conn, $sql_class);
+            $row_class = mysqli_fetch_assoc($result_class);
+            $branch_id = $row_class["id"];
+
+            $sql_class = "SELECT * FROM `tbl_class` WHERE `course_name`='$class_name'";
+            $result_class = mysqli_query($conn, $sql_class);
+            $row_class = mysqli_fetch_assoc($result_class);
+            $class_id = $row_class["course_id"];
+
+            $sql_section = "SELECT * FROM `tbl_section` WHERE `section_name`='$section_name'";
+            $result_section = mysqli_query($conn, $sql_section);
+            $row_section = mysqli_fetch_assoc($result_section);
+            $section_id = $row_section["section_id"];
+
+            $sql = "INSERT INTO `tbl_student`(`student_id`,`university_details_id`,`branch_id`,`reg_no`, `roll_no`,`course_id`,`section_id`,`student_name`,`dob`,`gender`,`father_name`,`mother_name`,`parent_contactno`,`create_time`,`status`) 
+                    VALUES ('','$university_details_id','$branch_id','$reg_no','$roll_no','$class_id','$section_id','$student_name','$dob','$gender','$father_name','$mother_name','$parent_contactno','$date_variable_today_month_year_with_timing','$visible')";
+
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_execute($stmt);
+
+            $c = $c + 1;
+        }
+
+        print_r($filesop);
+        exit();
+        if ($sql) {
+            echo "<script>
                             alert('Excel Imported Successfully!!!');
                             location.replace('student_view');
                         </script>";
-                } 
-                else
-                {
-                    echo "<script>
+        } else {
+            echo "<script>
                             alert('Something went wrong please try again!!!');
                             location.replace('student_view');
                         </script>";
-                }
-            }
         }
-    ?>
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -117,7 +111,7 @@
     <!-- Bootstrap4 Duallistbox -->
     <link rel="stylesheet" href="plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
     <!-- Theme style -->
-      <!-- DataTables -->
+    <!-- DataTables -->
     <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
@@ -131,26 +125,25 @@
         td {
             border-collapse: collapse;
         }
-
     </style>
     <script type="text/javascript">
-    $(document).ready(function() {
-        $("#frmCSVImport").on("submit", function () {
+        $(document).ready(function() {
+            $("#frmCSVImport").on("submit", function() {
 
-            $("#response").attr("class", "");
-            $("#response").html("");
-            var fileType = ".csv";
-            var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(" + fileType + ")$");
-            if (!regex.test($("#file").val().toLowerCase())) {
+                $("#response").attr("class", "");
+                $("#response").html("");
+                var fileType = ".csv";
+                var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(" + fileType + ")$");
+                if (!regex.test($("#file").val().toLowerCase())) {
                     $("#response").addClass("error");
                     $("#response").addClass("display-block");
-                $("#response").html("Invalid File. Upload : <b>" + fileType + "</b> Files.");
-                return false;
-            }
-            return true;
+                    $("#response").html("Invalid File. Upload : <b>" + fileType + "</b> Files.");
+                    return false;
+                }
+                return true;
+            });
         });
-    });
-    </script>   
+    </script>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -188,98 +181,101 @@
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                                 <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-remove"></i></button>
                             </div>-->
-                        <div id="response"
-                        class="<?php if(!empty($type)) { echo $type . " display-block"; } ?>">
-                        <?php if(!empty($message)) { echo $message; } ?>
-                        </div>
-                        
-                        <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                            <div id="response" class="<?php if (!empty($type)) {
+                                                            echo $type . " display-block";
+                                                        } ?>">
+                                <?php if (!empty($message)) {
+                                    echo $message;
+                                } ?>
+                            </div>
+
+                            <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
                                 <div class="input-row">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="images/marksheet/STUDENT_FORMAT.csv"><b style="font-size:16px;">Format</b></a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="images/marksheet/STUDENT_FORMAT.csv"><b style="font-size:16px;">Format</b></a>
                                     <label class="col-md-4 control-label">Choose CSV
                                         File</label> <input type="file" name="importExcelFile" />
                                     <input type="submit" name="importExcelButton" class="btn btn-success btn-sm" value="Import" />
-                                    
+
                                 </div>
 
-                        </form>
-                        <form role="form" method="POST" id="fetchStudentDataForm">
-                            <div class="card-body" style="margin-top: 0px;">
-                                <div class="row">
-                                   <div class="col-12" id="error_section"></div>
-                                  <?php 
-                                    if($_SESSION["logger_type"] == "admin"){
-                                  ?>
-                                   <div class="col-3">
-                                        <div class="form-group">
-                                            <label>Branch</label>
-                                            <select class="form-control" name="branch" >
-                                                <option value="0">Select Branch</option>
-                                                <option value="all">All</option>
-                                                <?php 
-                                                    $sql_branch = "SELECT * FROM `tbl_branch`;";
-                                                    $result_branch = $con->query($sql_branch);
-                                                    while($row_branch = $result_branch->fetch_assoc()){
-                                                ?>
-                                                <option value="<?php echo $row_branch["id"]; ?>"><?php echo $row_branch["branch_name"]; ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <?php } ?>
+                            </form>
+                            <form role="form" method="POST" id="fetchStudentDataForm">
+                                <div class="card-body" style="margin-top: 0px;">
+                                    <div class="row">
+                                        <div class="col-12" id="error_section"></div>
+                                        <?php
+                                        if ($_SESSION["logger_type"] == "admin") {
+                                        ?>
+                                            <div class="col-3">
+                                                <div class="form-group">
+                                                    <label>Branch</label>
+                                                    <select class="form-control" name="branch">
+                                                        <option value="0">Select Branch</option>
+                                                        <option value="all">All</option>
+                                                        <?php
+                                                        $sql_branch = "SELECT * FROM `tbl_branch`;";
+                                                        $result_branch = $con->query($sql_branch);
+                                                        while ($row_branch = $result_branch->fetch_assoc()) {
+                                                        ?>
+                                                            <option value="<?php echo $row_branch["id"]; ?>"><?php echo $row_branch["branch_name"]; ?></option>
+                                                        <?php } ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
 
-                                    <div class="col-3">
-                                        <div class="form-group">
-                                            <label>Class</label>
-                                            <select class="form-control" name="course_id" onchange="showdesg(this.value)" >
-                                                <option value="0">Select Class</option>
-                                                <?php 
+                                        <div class="col-3">
+                                            <div class="form-group">
+                                                <label>Class</label>
+                                                <select class="form-control" name="course_id" onchange="showdesg(this.value)">
+                                                    <option value="0">Select Class</option>
+                                                    <?php
                                                     $sql_course = "SELECT * FROM `tbl_class`
                                                                    WHERE `status` = '$visible';
                                                                    ";
                                                     $result_course = $con->query($sql_course);
-                                                    while($row_course = $result_course->fetch_assoc()){
-                                                ?>
-                                                <option value="<?php echo $row_course["course_id"]; ?>"><?php echo $row_course["course_name"]; ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="form-group">
-                                            <label>Section</label>
-                                            <select class="form-control" name="semester_id" id="sem" onchange="show(this.value)">
-                                               <option value="-1">Select</option>
+                                                    while ($row_course = $result_course->fetch_assoc()) {
+                                                    ?>
+                                                        <option value="<?php echo $row_course["course_id"]; ?>"><?php echo $row_course["course_name"]; ?></option>
+                                                    <?php } ?>
                                                 </select>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="col-3">
+                                            <div class="form-group">
+                                                <label>Section</label>
+                                                <select class="form-control" name="semester_id" id="sem" onchange="show(this.value)">
+                                                    <option value="-1">Select</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
-                                  
 
-                                    <div class="col-1" style="margin-top: 29px;">
-                                        <button type="submit" id="fetchStudentDataButton" class="btn btn-primary">Go</button>
+
+                                        <div class="col-1" style="margin-top: 29px;">
+                                            <button type="submit" id="fetchStudentDataButton" class="btn btn-primary">Go</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                        <div class="col-12" id="loader_section"></div>
-                        <!-- /.card-header -->
-                        <div class="card-body" id="data_table">
+                            </form>
+                            <div class="col-12" id="loader_section"></div>
+                            <!-- /.card-header -->
+                            <div class="card-body" id="data_table">
 
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
-
+            </section>
+            <!-- /.content -->
         </div>
-        </section>
-        <!-- /.content -->
-    </div>
 
-    <?php include 'include/footer.php'; ?>
+        <?php include 'include/footer.php'; ?>
 
-    <aside class="control-sidebar control-sidebar-dark">
-    </aside>
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
     </div>
 
     <script src="plugins/jquery/jquery.min.js"></script>
@@ -308,7 +304,7 @@
     <!-- DataTables -->
     <script src="plugins/datatables/jquery.dataTables.js"></script>
     <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-    
+
     <script>
         $(function() {
             //Initialize Select2 Elements
@@ -380,11 +376,10 @@
             });
 
         });
-
     </script>
     <script>
         $(document).ready(function() {
-            $('#fetchStudentDataForm').submit(function( event ) {
+            $('#fetchStudentDataForm').submit(function(event) {
                 $('#loader_section').append('<center id = "loading"><img width="50px" src = "images/ajax-loader.gif" alt="Currently loading" /></center>');
                 $('#fetchStudentDataButton').prop('disabled', true);
                 $.ajax({
@@ -393,9 +388,9 @@
                     data: $('#fetchStudentDataForm').serializeArray(),
                     success: function(result) {
                         $('#response').remove();
-                        if(result == 0){
+                        if (result == 0) {
                             $('#error_section').append('<div id = "response"><div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><i class="icon fas fa-ban"></i> Please select Academic Year!!!</div></div>');
-                        } else{
+                        } else {
                             $('#data_table').append('<div id = "response">' + result + '</div>');
                         }
                         $('#loading').fadeOut(500, function() {
@@ -408,7 +403,7 @@
             });
         });
     </script>
-     <script>
+    <script>
         $(function() {
             $("#example1").DataTable();
             $('#example2').DataTable({
@@ -420,20 +415,21 @@
                 "autoWidth": false,
             });
         });
-
     </script>
     <script>
-    function showdesg(dept) {
-        $.ajax({
-            url: 'ajaxdata.php',
-            type: 'POST',
-            data: {depart: dept},
-            success: function (data) {
-                $("#sem").html(data);
-            },
-        });
-    }
-</script>
+        function showdesg(dept) {
+            $.ajax({
+                url: 'ajaxdata.php',
+                type: 'POST',
+                data: {
+                    depart: dept
+                },
+                success: function(data) {
+                    $("#sem").html(data);
+                },
+            });
+        }
+    </script>
 </body>
 
 </html>
