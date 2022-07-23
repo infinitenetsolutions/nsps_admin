@@ -1,0 +1,9 @@
+[type=search] {
+    outline-offset: 0px !important ; 
+   -webkit-appearance: none !important;
+   -webkit-appearance: textfield !important;
+   outline-offset: 0px !important;
+ }
+ .dataTables_filter{
+     float: right;
+ }

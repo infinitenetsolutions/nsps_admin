@@ -1,0 +1,451 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mysqli_fet",
+				"mysqli_fetch_assoc"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"mysqliq",
+				"mysqli_query"
+			],
+			[
+				"ret",
+				"return_goods_ajax"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"ex",
+				"explode"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"get",
+				"getData"
+			],
+			[
+				"item",
+				"itemCode"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/xampp/htdocs/nsps/subject_view.php",
+		"/D/xampp/htdocs/inventory_new/controller/issue_controller.php",
+		"/D/xampp/htdocs/inventory_new/goods_issue.php",
+		"/C/Users/win10/Downloads/goods_issue.php",
+		"/D/xampp/htdocs/inventory_new/view/view_issue.php",
+		"/D/xampp/htdocs/nsps/include/view.php",
+		"/D/xampp/htdocs/nsps/include/aside.php",
+		"/D/xampp/htdocs/nsps/include/controller.php",
+		"/D/xampp/htdocs/nsps/include/config.php",
+		"/D/xampp/htdocs/nsps/include/db_class.php",
+		"/D/xampp/htdocs/nsps/student_view.php",
+		"/D/xampp/htdocs/nsps/ajaxdata.php",
+		"/D/xampp/htdocs/nsps/add_semester.php",
+		"/C/Users/win10/Downloads/aos.css",
+		"/D/xampp/htdocs/management/signup.php",
+		"/D/xampp/htdocs/ateebfoods/application/views/admin/payroll/edit_employee.php",
+		"/C/Users/win10/Downloads/tbl_admission.sql",
+		"/D/xampp/htdocs/management/setting.php",
+		"/D/xampp/htdocs/exam_portal/include/aside.php",
+		"/D/xampp/htdocs/nsps/admission_form.php",
+		"/D/xampp/htdocs/exam_portal/application/view/admin/exam-script-objective.php",
+		"/D/xampp/htdocs/nsps/include/authentication.php",
+		"/D/xampp/htdocs/nsps/course_view.php",
+		"/D/xampp/htdocs/exam_portal/application/classes-and-objects/config.php",
+		"/D/xampp/htdocs/exam_portal/exam-portal.php",
+		"/D/xampp/htdocs/exam_portal/index.php",
+		"/D/xampp/htdocs/exam_portal/application/controller/admin/store_student_nsu_to_exam.php",
+		"/D/xampp/htdocs/exam_portal/application/view/student/exam-portal.php",
+		"/D/xampp/htdocs/nsps/include/PHPExcel/PHPExcel.php",
+		"/C/Users/win10/Downloads/nsucms_cms (4).sql",
+		"/D/xampp/htdocs/exam_portal/application/view/student/exam-script-all.php",
+		"/D/xampp/htdocs/exam_portal/application/controller/student/ajax.php",
+		"/D/xampp/htdocs/exam_portal/dashboard.php",
+		"/D/xampp/htdocs/nsps_new/index.php",
+		"/D/xampp/htdocs/exam_portal/number-request.php",
+		"/C/Users/win10/Desktop/Et Projects (FNF, 24 Nov, 2020)/Collage Management Software/File/course_view.php",
+		"/D/xampp/htdocs/management/include/config.php",
+		"/C/Users/win10/Downloads/setting.php",
+		"/D/xampp/htdocs/nsps_new/includes/config.php",
+		"/D/xampp/htdocs/management/index.html",
+		"/D/xampp/htdocs/irems/manage-role.php",
+		"/D/xampp/htdocs/irems/include/aside.php",
+		"/D/xampp/htdocs/irems/maintainance.php",
+		"/C/Users/win10/Downloads/tbl_maintainance.sql",
+		"/D/xampp/htdocs/irems/purchase-order.php",
+		"/D/xampp/htdocs/irems/getinformationsproject.php",
+		"/D/xampp/htdocs/irems/aside.php",
+		"/D/xampp/htdocs/attendance/login.php",
+		"/D/xampp/htdocs/attendance/check_teacher_login.php",
+		"/C/Users/win10/Desktop/all htdocs projects/irems/application/controller/admin/login.php",
+		"/D/xampp/htdocs/attendance/admin/database_connection.php",
+		"/D/xampp/htdocs/attendance/admin/login.php",
+		"/D/xampp/htdocs/nsucms/include/navbar.php",
+		"/D/xampp/htdocs/nsucms/admin_view.php",
+		"/D/xampp/htdocs/nsucms/include/controller.php",
+		"/C/Users/win10/Desktop/Et Projects (FNF, 24 Nov, 2020)/Collage Management Software/File/admission_form.php",
+		"/D/xampp/htdocs/nsucms/include/view.php",
+		"/D/xampp/htdocs/nsucms/include/aside.php",
+		"/C/Users/win10/Downloads/view_reports.php",
+		"/C/Users/win10/Desktop/all htdocs projects/irems/goods-receipt.php",
+		"/C/Users/win10/Desktop/all htdocs projects/irems/application/view/admin/goods-receipt.php",
+		"/C/Users/win10/Desktop/all htdocs projects/irems/application/view/admin/view_orders.php",
+		"/C/Users/win10/Downloads/master_reports (1).php",
+		"/D/xampp/htdocs/nsucms/index.php",
+		"/D/xampp/htdocs/inventory_new/include/authentication.php",
+		"/C/Users/win10/Downloads/inventory_master.tpl (1).php",
+		"/D/xampp/htdocs/inventory_new/include/header.php",
+		"/C/Users/win10/Downloads/es_in_goods_issue (1).sql",
+		"/D/xampp/htdocs/inventory1/include/header.php",
+		"/D/xampp/htdocs/inventory_new/include/sidebar.php",
+		"/D/xampp/htdocs/inventory_new/dashboard.php",
+		"/D/xampp/htdocs/inventory_new/include/commonfunctions.php",
+		"/D/xampp/htdocs/inventory_new/include/db.php",
+		"/C/Users/win10/Downloads/inventory_master.tpl.php",
+		"/D/xampp/htdocs/inventory1/include/authentication.php",
+		"/D/xampp/htdocs/inventory/dashboard.php",
+		"/D/xampp/htdocs/billing/include/dbcon.php",
+		"/C/Users/win10/Downloads/es_in_category.sql",
+		"/C/Users/win10/Downloads/es_in_goods_issue.sql",
+		"/C/Users/win10/Downloads/es_in_item_master.sql",
+		"/D/xampp/htdocs/bakersstreetjsr/billing/index.php",
+		"/D/xampp/htdocs/inventory/include/db.php",
+		"/D/xampp/htdocs/inventory/include/commonfunctions.php",
+		"/D/xampp/htdocs/bakersstreetjsr/billing/include/dbcon.php",
+		"/D/xampp/htdocs/bakersstreetjsr/billing/d.html",
+		"/D/xampp/htdocs/bakersstreetjsr/billing/include/commonFuncs.php",
+		"/C/Users/win10/Downloads/News (2).php",
+		"/D/xampp/htdocs/domains/bakersstreetjsr.com/public_html/billing/include/dbcon.php",
+		"/D/xampp/htdocs/bakersstreet/include/commonFuncs.php",
+		"/D/xampp/htdocs/bakersstreet/include/dbcon.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Ingredients.php",
+		"/C/xampp/htdocs/irems/application/view/admin/manage-employees.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Product.php",
+		"/C/xampp/htdocs/irems/application/controller/admin/login.php",
+		"/C/xampp/htdocs/irems/crm/application/views/login.php",
+		"/C/xampp/htdocs/irems/crm/application/controllers/admin/Login.php",
+		"/C/xampp/htdocs/irems/include/aside.php",
+		"/C/xampp/htdocs/irems/crm/application/config/routes.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Prod_orders.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Attendance.php",
+		"/C/xampp/htdocs/irems/application/controller/admin/manage-employees.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Designation.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Department.php",
+		"/C/xampp/htdocs/ateebfoods/application/views/admin/payroll/edit_employee.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Payroll.php",
+		"/C/xampp/htdocs/irems/application/controller/customer/customerportal.php",
+		"/C/xampp/htdocs/nsucms/include/controller.php",
+		"/C/xampp/htdocs/irems/application/view/admin/purchase-order.php",
+		"/C/xampp/htdocs/irems/crm/application/models/Leadmanage_model.php",
+		"/C/xampp/htdocs/irems/crm/application/controllers/admin/Leadmanage.php",
+		"/C/xampp/htdocs/irems/crm/application/views/admin/leadmanage/manage_lead.php",
+		"/C/xampp/htdocs/irems/crm/application/views/admin/advertisement/manage_advertisement.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Login.php",
+		"/C/xampp/htdocs/irems/crm/application/controllers/Welcome.php",
+		"/C/xampp/htdocs/irems/crm/application/controllers/Main.php",
+		"/C/xampp/htdocs/irems/crm/application/models/Login_model.php",
+		"/C/xampp/htdocs/irems/crm/application/config/autoload.php",
+		"/C/xampp/htdocs/irems/crm/application/config/config.php",
+		"/C/xampp/htdocs/ateebfoods/application/views/admin/advertisement/manage_advertisement.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/roles/Administration.php",
+		"/C/xampp/htdocs/ateebfoods/application/views/roles/administration/view_administration.php",
+		"/C/xampp/htdocs/ateebfoods/application/controllers/Welcome.php",
+		"/C/xampp/htdocs/nsucms/include/authentication.php",
+		"/C/xampp/htdocs/ateebfoods/application/views/login.php",
+		"/C/Users/win10/Downloads/purchase-order (3).php",
+		"/C/xampp/htdocs/irems/application/controller/admin/purchase-order.php",
+		"/C/xampp/htdocs/irems/crm/application/controllers/Main1.php",
+		"/C/xampp/htdocs/ateebfoods/application/config/routes.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"delete_subject_id",
+			"delete_section_id",
+			"get_section",
+			"delete_get_section",
+			"get_section",
+			"get_semester",
+			"get_section",
+			"get_semester",
+			"get_section",
+			"get_semester",
+			"get_section",
+			"get_subjects",
+			"get_section",
+			"get_subjects",
+			"get_section",
+			"add_subjects",
+			"add_semester",
+			"add_subjects",
+			"add_semester",
+			"add_subjects",
+			"date_variable_today_month_year_with_timing",
+			"add_subjects",
+			"add_semester",
+			"add_subjects",
+			"$semester",
+			"add_subject",
+			"add_section",
+			"add_subject_form",
+			"add_subject_name",
+			"showdesg",
+			"edit_course",
+			"edit_courses",
+			"importExcelButton",
+			"add_courses_with_excel",
+			"importExcelButton",
+			"importExcelFile",
+			"add_course_button",
+			"add_courses_with_excel",
+			"action",
+			"import",
+			"add_course_name",
+			"add_course_button",
+			"action",
+			"add_courses_with_excel",
+			"nsucms_cms",
+			"project",
+			"getinformationsproject",
+			"project_id",
+			"company_name",
+			"vendor_name",
+			"crm",
+			"teacher_login_form",
+			"teacher_emailid",
+			"add_admin",
+			"get_admin",
+			"aside",
+			"$result",
+			"result",
+			"in_itemsList",
+			"IssuedItems",
+			"in_itemsList",
+			"IssuedItems",
+			" mysql",
+			"include",
+			"validateLogin",
+			"foreac",
+			"else",
+			"login_user",
+			"fetch_student_fee_details",
+			"fetchFeeDataForm",
+			"student",
+			"studentnodues",
+			"studentno",
+			"approval",
+			"fetchFeeDataForm",
+			"edit_exam_status_button",
+			"fetch_studentlist_nodues_details",
+			"checked",
+			"fetch_student_semester",
+			"event",
+			"get_sub",
+			"\\",
+			"fetch_exam_form",
+			"tbl_manage_employee",
+			"project",
+			"get_projectData_byprojectId",
+			"addproduct",
+			"insert_lead_data",
+			"Save",
+			"fetch_employee_name",
+			"getPacketbyProduct",
+			"employee_id",
+			"project",
+			"form-repeater",
+			"date_followup",
+			"project",
+			"employee_id",
+			"designation",
+			"fetch_employee",
+			"department",
+			"Manage Advertisements Leads",
+			"insert_lead_data",
+			" <td colspan=\"2\">PURCHASE ORDER</td>",
+			"fetchPrint",
+			"issue_status",
+			"project",
+			"echo",
+			"issue_status",
+			"goods_issue",
+			"project",
+			"report_type",
+			"goods_issue",
+			"Project",
+			"project",
+			"print_r",
+			"cen",
+			"project",
+			"from",
+			"project",
+			"fetchPrint",
+			"fetchprint",
+			"fetch",
+			"employee_req"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "add_course.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 270.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
